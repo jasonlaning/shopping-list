@@ -28,9 +28,10 @@ function deleteItem(element) {
 
 // event listeners
 $('#js-shopping-list-form').submit(function(event) {
-	event.preventDefault();
+	event.preventDefault();	
 	addItem(state, $('input#shopping-list-entry').val());
 	renderNewItem(state, $('.shopping-list'));
+	$('input#shopping-list-entry').val('');
 });
 
 $('ul').on('click', '.shopping-item-toggle', (function() {
